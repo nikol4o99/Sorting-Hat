@@ -1,31 +1,35 @@
+#include <cstdio>
 #include <iostream>
 #include <string>
 using namespace std;
 
-void NameSorting(int n,string Names[1000],string House[1000])
+void NameSorting(int n,string Names[],string House[])
 {
-    //int HouseNum[n];
     string Slytherin,Hufflepuff,Gryffindor,Ravenclaw;
-    for(int i=0; i<n; i++)
+    for(int i=0; i<n; i++)//разпределение на хората 1 по един и въвеждане по домове
     {
-        if(House[i]=="Slytherin"){
-            Slytherin+='\n';
-            Slytherin+= Names[i];
+        if(House[i]=="Slytherin")
+        {
+            Slytherin+='\n';//добавяне на нов ред в стринга за следващото име
+            Slytherin+= Names[i];//добавяне на име към дома
         }
-        if(House[i]=="Hufflepuff"){
+        if(House[i]=="Hufflepuff")
+        {
             Hufflepuff+='\n';
             Hufflepuff+= Names[i];
         }
-        if(House[i]=="Gryffindor"){
+        if(House[i]=="Gryffindor")
+        {
             Gryffindor+='\n';
             Gryffindor+= Names[i];
         }
-        if(House[i]=="Ravenclaw"){
+        if(House[i]=="Ravenclaw")
+        {
             Ravenclaw+='\n';
             Ravenclaw+= Names[i];
         }
     }
-    cout<<"Slytherin:"<<Slytherin<<endl<<endl;
+    cout<<"Slytherin:"<<Slytherin<<endl<<endl;//редове 32 до 35 е изход на домовете и кои хора са във всеки един от тях
     cout<<"Hufflepuff:"<<Hufflepuff<<endl<<endl;
     cout<<"Gryffindor:"<<Gryffindor<<endl<<endl;
     cout<<"Ravenclaw:"<<Ravenclaw<<endl<<endl;
@@ -34,15 +38,15 @@ void NameSorting(int n,string Names[1000],string House[1000])
 
 int main()
 {
-    int n;
-    cin>>n;
+    int n;//Брой хора за сортиране
+    cin>>n;//Вход
     string a;
-    getline(cin,a);
-    string Names[n],House[n];
-    for(int i=1; i<=n; i++)
+    getline(cin,a);//ред 43 и 44 са за да не взима първия ред като стринг, а да чете от втория
+    string Names[n],House[n];//деклариране на масивите за имена и къщите в които са разпределени
+    for(int i=0; i<n; i++)//въвеждане на хората и къщите в които са разпределени
     {
-        getline(cin,Names[i-1]);
-        getline(cin,House[i-1]);
+        getline(cin,Names[i]);
+        getline(cin,House[i]);
     }
     NameSorting(n,Names,House);
 
