@@ -10,24 +10,36 @@ Input
 The first line contains the number of first-year students N (1 ≤ N ≤ 1000). In the next 2N lines there are their names followed by houses in which the Sorting Hat placed them. A student's name may contain lowercase and uppercase English letters, spaces and hyphens. Each name contains not more than 200 symbols.
 Output
 Output lists of students of each house in the following format. In the first line there is the name of the house, then a colon, and in the next lines there is the list of students, one in a line. The lists must be given in the following order: Slytherin, Hufflepuff, Gryffindor, Ravenclaw. There must be empty lines between the lists. In each list, names must be given in the order in which they were called out during the sorting. It is guaranteed that each list will contain at least one student.
+
+
+
 Sample
-input	output
+input: 
+
 7
+
 Ivan Ivanov
 Gryffindor
+
 Mac Go Nagolo
 Hufflepuff
+
 Zlobeus Zlei
 Slytherin
+
 Um Bridge
 Slytherin
+
 Tatiana Henrihovna Grotter
 Ravenclaw
+
 Garry Potnyj
 Gryffindor
+
 Herr Mionag-Ranger
 Gryffindor
 
+output:
 
 Slytherin:
 Zlobeus Zlei
