@@ -49,17 +49,25 @@ Gryffindor
 output:
 
 Slytherin:
+
 Zlobeus Zlei
+
 Um Bridge
 
 Hufflepuff:
+
 Mac Go Nagolo
 
 Gryffindor:
+
 Ivan Ivanov
+
 Garry Potnyj
+
 Herr Mionag-Ranger
 
 Ravenclaw:
 Tatiana Henrihovna Grotter
+
+
 Problem Author: Stanislav Vasilyev
