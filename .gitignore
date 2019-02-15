@@ -1,32 +1,52 @@
-# Prerequisites
-*.d
+#include <iostream>
+#include <string>
+using namespace std;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+void NameSorting(int n,string Names[1000],string House[1000])
+{
+    //int HouseNum[n];
+    string Slytherin,Hufflepuff,Gryffindor,Ravenclaw;
+    for(int i=0; i<n; i++)
+    {
+        if(House[i]=="Slytherin"){
+            Slytherin+='\n';
+            Slytherin+= Names[i];
+        }
+        if(House[i]=="Hufflepuff"){
+            Hufflepuff+='\n';
+            Hufflepuff+= Names[i];
+        }
+        if(House[i]=="Gryffindor"){
+            Gryffindor+='\n';
+            Gryffindor+= Names[i];
+        }
+        if(House[i]=="Ravenclaw"){
+            Ravenclaw+='\n';
+            Ravenclaw+= Names[i];
+        }
+    }
+    cout<<"Slytherin:"<<Slytherin<<endl<<endl;
+    cout<<"Hufflepuff:"<<Hufflepuff<<endl<<endl;
+    cout<<"Gryffindor:"<<Gryffindor<<endl<<endl;
+    cout<<"Ravenclaw:"<<Ravenclaw<<endl<<endl;
 
-# Precompiled Headers
-*.gch
-*.pch
+}
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+int main()
+{
+    int n;
+    cin>>n;
+    string a;
+    getline(cin,a);
+    string Names[n],House[n];
+    for(int i=1; i<=n; i++)
+    {
+        getline(cin,Names[i-1]);
+        getline(cin,House[i-1]);
+    }
+    NameSorting(n,Names,House);
 
-# Fortran module files
-*.mod
-*.smod
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
 
-# Executables
-*.exe
-*.out
-*.app
+    return 0;
+}
